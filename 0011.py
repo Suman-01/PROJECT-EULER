@@ -22,7 +22,7 @@ txt = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 matrix = [[int(col) for col in row.split()] for row in txt.strip().splitlines("\n")]
 
 max_prod = []
-k = 4
+k = 4   # unecesssary
 n_rows = len(matrix)
 n_cols = len(matrix[0])
 
@@ -38,4 +38,8 @@ for i in range(n_cols - k + 1):
         max_prod.append(matrix[i][n_rows - 1 - j] * matrix[i + 1][n_rows - 1 - (j + 1)] * matrix[i + 2][n_rows - 1 - (j + 2)] * matrix[i + 3][n_rows - 1 - (j + 3)])
         
 print(max(max_prod))
+
+#need to make it flexible (not hard coded)
+# remove hard codes
+# use numpy
 
