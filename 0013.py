@@ -100,16 +100,31 @@ number_string = """37107287533902102798797998220837590246510135740250
                     20849603980134001723930671666823555245252804609722
                     53503534226472524250874054075591789781264330331690"""
 
+# def manual_sum(num_list):
+#     total = 0
+#     for num in num_list:
+#         n_trunc = int(str(num)[:14])
+#         total += n_trunc
+    
+#     return str(total)[:10]
+
+# s = manual_sum(numbers)
 
 numbers = [int(num) for num in number_string.splitlines('\n')]
+
 start = time.perf_counter()
 s = str(sum(numbers))[:10]
 end = time.perf_counter()
 delta = end - start
+
 print(s)
 print(f"Time: {delta:.6f}s")
 
 
-# OUTPUT (sum function):
+# OUTPUT (python sum function):
 # 5537376230
 # Time: 0.000004s
+
+# OUTPUT (manual_sum):
+# 5537376230
+# Time: 0.000029s
